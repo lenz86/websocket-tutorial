@@ -16,13 +16,6 @@ import java.util.concurrent.ExecutionException;
 @Controller
 public class ChatController {
 
-//	@MessageMapping("/chat.register")
-//	@SendTo("/topic/public")
-//	public String register(@Payload String message, SimpMessageHeaderAccessor headerAccessor) {
-//		headerAccessor.getSessionAttributes().put("message-log", message);
-//		return message;
-//	}
-
 	@RequestMapping("/")
 	public String home() {
 		return "index.html";

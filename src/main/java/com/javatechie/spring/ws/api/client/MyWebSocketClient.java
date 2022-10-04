@@ -28,7 +28,7 @@ public class MyWebSocketClient {
 
         WebSocketStompClient stompClient = new WebSocketStompClient(sockJsClient);
 
-        String url = "ws://{host}:{port}/javatechie";
+        String url = "ws://{host}:{port}/wshost";
         return stompClient.connect(url, headers, new MyHandler(), "localhost", 8080);
     }
 

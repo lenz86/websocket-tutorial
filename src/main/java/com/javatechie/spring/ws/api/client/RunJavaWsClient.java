@@ -20,8 +20,7 @@ public class RunJavaWsClient {
         firstName = bufferedReader.readLine();
         System.out.println("Type last name");
         lastName = bufferedReader.readLine();
-        String jsonMsg = "{ " + firstName + " : " + lastName + " }";
-
+        String jsonMsg = "{" + "\"firstName\":" + "\"" + firstName + "\"," + "\"lastName\":" + "\"" + lastName + "\"" + "}";
         MyWebSocketClient myWebSocketClient = new MyWebSocketClient();
         ListenableFuture<StompSession> f = myWebSocketClient.connect();
         StompSession stompSession = f.get();
